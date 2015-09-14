@@ -4,24 +4,34 @@ title: Blog
 permalink: /blog/
 position: 4
 ---
-<h1>About Page</h1>
+<div id="blog">
+  <h1>Fellowship Blog</h1>
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
+  <section id="posts" class="container-fluid">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
+    <article class="post row">  
+      <div class="col-sm-2 hidden-xs cal">
+        <div class="date-box">
+        <i class="fa fa-calendar-o"></i>
+          <span class="date">{{ post.date | date: "%-d"}}</span>
+          <span class="month">{{ post.date | date: "%b"}}</span>
+        
+        </div>
+      </div>
+      <div class="col-sm-10 pad">
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-      </li>
+        <p>{{ post.excerpt}}</p>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="pull-right">Read more..</a>
+      </div>
+    </article>
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+</section>
+<div class="subscribe">
+ subscribe<a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>
 </div>
+</div>
+
+

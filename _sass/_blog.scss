@@ -1,0 +1,45 @@
+#blog{
+  #posts{
+    margin-top: 1em;
+    .post{
+      h2{
+        margin-top: 0;
+      }
+      .date-box{
+
+       padding-left: 2em;
+       .cal{
+        margin-right: -18px;
+        position: absolute;
+      }
+      .fa{
+        font-size: 4.5em;
+        color: #000;
+        position: absolute;
+      }
+      .date{
+        font-size: 1.29em;
+        color: #000;
+        display: inline-block;
+        padding-top: 1.5em;
+        padding-left: 0.3em;
+      }
+      .month{
+        font-size: 1.29em;
+        color: #000;
+        display: inline-block;
+        padding-top: 1.5em;
+        padding-left: 0.3em;
+      }
+    }
+  }
+}
+.subscribe{
+  text-align:center;
+  margin: 1em 0;
+}
+.pad{
+  padding-left: 0px;
+}
+
+}
